@@ -35,7 +35,7 @@ import java.util.List;
  */
 public class TestShiro {
     public static void main(String[] args) {
-        //用户们
+        //用户
         User zhang3 = new User();
         zhang3.setName("zhang3");
         zhang3.setPassword("12345");
@@ -53,7 +53,7 @@ public class TestShiro {
         users.add(zhang3);
         users.add(li4);
         users.add(wang5);
-        //角色们
+        //角色
         String roleAdmin = "admin";
         String roleProductManager ="productManager";
 
@@ -61,7 +61,7 @@ public class TestShiro {
         roles.add(roleAdmin);
         roles.add(roleProductManager);
 
-        //权限们
+        //权限
         String permitAddProduct = "addProduct";
         String permitAddOrder = "addOrder";
 
@@ -142,7 +142,7 @@ public class TestShiro {
 
     private static boolean login(User user) {
         Subject subject= getSubject();
-        //如果已经登录过了，退出
+        //如果已经登录过了，退出 其实这里可以不用退出 还在思考为什么
         if(subject.isAuthenticated()) {
             subject.logout();
         }
