@@ -1,0 +1,12 @@
+
+dsquid:S1075)"ARefactor your code to get this URI from a customizable parameter.(™ËÎÚûÿÿÿÿ8îËœ-
+nsquid:UselessImportCheck"CRemove this unused import 'org.apache.poi.hssf.usermodel.HSSFCell'.(™Óšà8é›¼œ-
+Vsquid:S11975"8Move the array designator from the variable to the type.(ÿÀ½8îËœ-
+wsquid:UselessImportCheck"GRemove this unused import 'org.apache.poi.hssf.usermodel.HSSFWorkbook'.(¾§—Œıÿÿÿÿ8é›¼œ-
+_squid:UselessImportCheck"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg8îËœ-
+[
+squid:S1068"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ8îËœ-
+osquid:UselessImportCheck"DRemove this unused import 'org.apache.poi.hssf.usermodel.HSSFSheet'.(®…óŸ8é›¼œ-
+msquid:UselessImportCheck"BRemove this unused import 'org.apache.poi.hssf.usermodel.HSSFRow'.(‹õ·¿8é›¼œ-
+[
+squid:S1064"9Replace this use of System.out or System.err by a logger.(„ìŒúÿÿÿÿ8îËœ-
