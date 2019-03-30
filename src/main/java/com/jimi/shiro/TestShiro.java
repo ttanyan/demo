@@ -123,6 +123,7 @@ public class TestShiro {
 
 
     /**
+     * 需要优化
      * 这个权限初始化应该放在最开始，不能每次调用都去读一次文件
      * @return
      */
