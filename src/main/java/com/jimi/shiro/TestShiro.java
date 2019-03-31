@@ -124,7 +124,7 @@ public class TestShiro {
 
     /**
      * 需要优化
-     * 这个权限初始化应该放在最开始，不能每次调用都去读一次文件
+     * 这个Subject初始化应该放在最开始，不能每次调用都去读一次文件
      * @return
      */
     private static Subject getSubject() {
@@ -142,7 +142,7 @@ public class TestShiro {
 
     private static boolean login(User user) {
         Subject subject= getSubject();
-        //如果已经登录过了，退出 其实这里可以不用退出 还在思考为什么
+        //如果已经登录过了，退出 其实这里可以不用退出 但是很多人都是写的退出
         if(subject.isAuthenticated()) {
             subject.logout();
         }
