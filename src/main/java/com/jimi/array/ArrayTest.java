@@ -32,13 +32,28 @@ public class ArrayTest {
         list2.add("2015132111");
         list2.add("2015132112");
         list2.add("2015132113");
+        list2.add("2015132114");
+        System.out.println(list2);
         Set<String> aimei = new HashSet<>(list2);
-        String bimei = "2015132114\r2015132113\r2015132115\r2015132110\r2015132116";
-        String imeis = bimei.replaceAll("\r\n", ",").replaceAll("\n", ",").replaceAll("\r",",");
+        Set<String>  nimei = new HashSet<>(list2);
+        System.out.println(nimei.size());
+        aimei.isEmpty();
+        Object[] strArray = aimei.toArray();
+        for(int i = 0;i<strArray.length;i++){
+            System.out.println(strArray[i]);
+        }
+
+        String bimei = "2015132114\n\r2015132113\n\n\n\n\n\n\n\n\n\n\n\n\n\r\r2015132115\n2015132110\n2015132116";
+
+        String imeis = bimei.replaceAll("\n+",",").replaceAll("\r+",",");
+        String imeis1 = bimei.replaceAll("\n",",").replaceAll("\r",",").replaceAll(",+",",").replaceAll(" ","");
+        System.out.println("bimei"+bimei+"\n"+"imeissssssssssssssssssss"+imeis);
+
         Set<String> imeiArray = new HashSet<>(Arrays.asList(imeis.split(",")));
         System.out.println(aimei);
         System.out.println(imeiArray);
         imeiArray.addAll(aimei);
         System.out.println(imeiArray);
+
     }
 }
