@@ -34,26 +34,32 @@ public class ArrayTest {
         list2.add("2015132113");
         list2.add("2015132114");
         System.out.println(list2);
+        //List转Set
         Set<String> aimei = new HashSet<>(list2);
-        Set<String>  nimei = new HashSet<>(list2);
-        System.out.println(nimei.size());
-        aimei.isEmpty();
+        // Set转String
         Object[] strArray = aimei.toArray();
-        for(int i = 0;i<strArray.length;i++){
-            System.out.println(strArray[i]);
-        }
 
-        String bimei = "2015132114\n\r2015132113\n\n\n\n\n\n\n\n\n\n\n\n\n\r\r2015132115\n2015132110\n2015132116";
-
-        String imeis = bimei.replaceAll("\n+",",").replaceAll("\r+",",");
+        System.out.println("object对象 "+strArray.toString());
+        //Set转String
+        String s = String.join(",",aimei);
+        System.out.println("sString\r"+s);
+        //空格替换
+        String bimei = "2015132114\n2015132113\n\n\n\n\n\n\n\n\n\n\n\n\n\r\r2015132115\n2015132110\n2015132116";
+        String imeis = bimei.replaceAll("\n+",",");
         String imeis1 = bimei.replaceAll("\n",",").replaceAll("\r",",").replaceAll(",+",",").replaceAll(" ","");
-        System.out.println("bimei"+bimei+"\n"+"imeissssssssssssssssssss"+imeis);
-
         Set<String> imeiArray = new HashSet<>(Arrays.asList(imeis.split(",")));
         System.out.println(aimei);
         System.out.println(imeiArray);
         imeiArray.addAll(aimei);
         System.out.println(imeiArray);
+
+        //删除头尾空白字符
+        String qs = " rerewr  ";
+        System.out.println(qs.trim());
+
+        //验证String[]的length会不会计算空值
+        String[] strings = {"1","","2",""};
+        System.out.println(strings.length);
 
     }
 }
