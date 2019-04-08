@@ -24,6 +24,14 @@ package com.jimi.shiro;
  */
 public class User {
     /**
+     * id
+     */
+    private  Integer id;
+    /**
+     * 盐
+     */
+    private String salt;
+    /**
      * 用户名
      */
     private String name;
@@ -46,5 +54,21 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }

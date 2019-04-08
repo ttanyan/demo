@@ -65,49 +65,67 @@ public class TestShiro {
         String permitAddProduct = "addProduct";
         String permitAddOrder = "addOrder";
 
-        List<String> permits = new ArrayList<>();
-        permits.add(permitAddProduct);
-        permits.add(permitAddOrder);
-        System.out.println("-------登录验证------");
-        //登陆每个用户
-        for (User user : users) {
-            if(login(user)) {
-                System.out.printf("%s \t成功登陆，用的密码是 %s\t %n", user.getName(), user.getPassword());
-            }
-            else {
-                System.out.printf("%s \t成功失败，用的密码是 %s\t %n", user.getName(), user.getPassword());
-            }
-        }
+//        List<String> permits = new ArrayList<>();
+//        permits.add(permitAddProduct);
+//        permits.add(permitAddOrder);
+//        System.out.println("-------登录验证------");
+//        //登陆每个用户
+//        for (User user : users) {
+//            if(login(user)) {
+//                System.out.printf("%s \t成功登陆，用的密码是 %s\t %n", user.getName(), user.getPassword());
+//            }
+//            else {
+//                System.out.printf("%s \t成功失败，用的密码是 %s\t %n", user.getName(), user.getPassword());
+//            }
+//        }
+//
+//        System.out.println("-------角色验证------");
+//
+//        //判断能够登录的用户是否拥有某个角色
+//        for (User user : users) {
+//            for (String role : roles) {
+//                if(login(user)) {
+//                    if(hasRole(user, role)) {
+//                        System.out.printf("%s\t 拥有角色: %s\t%n", user.getName(), role);
+//                    }
+//                    else {
+//                        System.out.printf("%s\t 不拥有角色: %s\t%n", user.getName(), role);
+//                    }
+//                }
+//            }
+//        }
+//        System.out.println("-------权限验证------");
+//
+//        //判断能够登录的用户，是否拥有某种权限
+//        for (User user : users) {
+//            for (String permit : permits) {
+//                if(login(user)) {
+//                    if(isPermitted(user, permit)) {
+//                        System.out.printf("%s\t 拥有权限: %s\t%n", user.getName(), permit);
+//                    }
+//                    else {
+//                        System.out.printf("%s\t 不拥有权限: %s\t%n", user.getName(), permit);
+//                    }
+//                }
+//            }
+//        }
 
-        System.out.println("-------角色验证------");
 
-        //判断能够登录的用户是否拥有某个角色
-        for (User user : users) {
-            for (String role : roles) {
-                if(login(user)) {
-                    if(hasRole(user, role)) {
-                        System.out.printf("%s\t 拥有角色: %s\t%n", user.getName(), role);
-                    }
-                    else {
-                        System.out.printf("%s\t 不拥有角色: %s\t%n", user.getName(), role);
-                    }
-                }
-            }
-        }
-        System.out.println("-------权限验证------");
 
-        //判断能够登录的用户，是否拥有某种权限
-        for (User user : users) {
-            for (String permit : permits) {
-                if(login(user)) {
-                    if(isPermitted(user, permit)) {
-                        System.out.printf("%s\t 拥有权限: %s\t%n", user.getName(), permit);
-                    }
-                    else {
-                        System.out.printf("%s\t 不拥有权限: %s\t%n", user.getName(), permit);
-                    }
-                }
-            }
+
+        //新建用户
+//        new ShiroDAO().createUser("tlw","123");
+
+        User user = new User();
+        user.setName("tlw");
+        user.setPassword("123");
+
+        if(login(user)){
+
+            System.out.println("登录成功");
+        }else{
+
+            System.out.println("登录失败");
         }
     }
 
@@ -156,9 +174,7 @@ public class TestShiro {
             //验证错误
             return false;
         }
-
         return subject.isAuthenticated();
     }
-
 
 }

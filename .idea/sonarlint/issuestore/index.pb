@@ -41,3 +41,5 @@ Y
 )src/main/java/com/jimi/array/ListAdd.java,8\1\81e1c7871f0bed268024e0cf88dc828e46f13df5
 [
 +src/main/java/com/jimi/array/ArrayTest.java,2\8\28658edbb289d9759a4517817c7a49633e478ad0
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0

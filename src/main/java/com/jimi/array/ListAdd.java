@@ -35,6 +35,7 @@ public class ListAdd {
         list1.add("试");
         list1.add("一");
         list1.add("下");
+        System.out.println(list1.isEmpty());
         //给list2赋值
         list2.add("下");
         list2.add("并");
