@@ -60,10 +60,23 @@ public class Student {
         this.sex = sex;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", number=" + number +
+                ", sex='" + sex + '\'' +
+                '}';
+    }
+
     public Student(String name, int age, int number, String sex) {
         this.name = name;
         this.age = age;
         this.number = number;
         this.sex = sex;
+    }
+    public Student(){
+
     }
 }

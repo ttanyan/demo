@@ -43,6 +43,7 @@ public class ListAdd {
         list2.add("表");
         //将list1.list2合并
         list1.addAll(list2);
+        System.out.println("list1"+list1);
         //循环输出list1 看看结果
         for (String s : list1) {
             System.out.print(s);
