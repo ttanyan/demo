@@ -61,5 +61,7 @@ public class ArrayTest {
         String[] strings = {"1","","2",""};
         System.out.println(strings.length);
 
+
+
     }
 }
