@@ -1,7 +1,0 @@
-
-hsquid:S2095("JUse try-with-resources or close this "XSSFWorkbook" in a "finally" clause.(¸™á…8÷êÉžœ-
-osquid:UselessImportCheck"DRemove this unused import 'org.apache.poi.hssf.usermodel.HSSFSheet'.(®…óŸ8÷êÉžœ-
-nsquid:UselessImportCheck"CRemove this unused import 'org.apache.poi.hssf.usermodel.HSSFCell'.(™Óšà8÷êÉžœ-
-wsquid:UselessImportCheck"GRemove this unused import 'org.apache.poi.hssf.usermodel.HSSFWorkbook'.(¾§—Œýÿÿÿÿ8÷êÉžœ-
-_squid:S10752"ARefactor your code to get this URI from a customizable parameter.(‰ã‘ 8÷êÉžœ-
-msquid:UselessImportCheck"BRemove this unused import 'org.apache.poi.hssf.usermodel.HSSFRow'.(‹õ·¿8÷êÉžœ-

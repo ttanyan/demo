@@ -1,17 +1,0 @@
-
-T
-squid:S106>"9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ
-T
-squid:S106:"9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ
-:squid:S1148A"#Use a logger to log this exception.(Ç’Çê
-T
-squid:S106?"9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ
-T
-squid:S106="9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ
-T
-squid:S106;"9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ
-T
-squid:S1069"9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ
-Dsquid:S16043"(Make this anonymous inner class a lambda(†ºø£þÿÿÿÿ
-O
-squid:S106<"9Replace this use of System.out or System.err by a logger.(øñÍÙ
