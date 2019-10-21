@@ -32,7 +32,7 @@ public class ProducePool {
     private String user = ActiveMQConnection.DEFAULT_USER;
     private String password = ActiveMQConnection.DEFAULT_PASSWORD;
     private String url = ActiveMQConnection.DEFAULT_BROKER_URL;
-    private String subject = "mytopic";
+    private String subject = "myqueue";
     private Destination destination = null;
     private Connection connection = null;
     private Session session = null;
@@ -45,7 +45,7 @@ public class ProducePool {
      */
     public void initializa() throws JMSException{
 
-        //1、创建工厂连接对象，需要制定ip和端口号。
+        //1、创建工厂连接对象，需要指定ip和端口号。
         ActiveMQConnectionFactory activeMQConnectionFactory
                 = new ActiveMQConnectionFactory(user,password,url);
         //2、使用连接工厂创建一个连接对象
@@ -53,10 +53,11 @@ public class ProducePool {
          //3、使用连接对象创建会话（session）对象
          session = connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
          //使用会话对象创建生产者
-         destination = session.createTopic(subject);
+//         destination = session.createTopic(subject);
+        destination =session.createQueue(subject);
         producer = session.createProducer(destination);
 
-        producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+        producer.setDeliveryMode(DeliveryMode.PERSISTENT);
     }
 
 

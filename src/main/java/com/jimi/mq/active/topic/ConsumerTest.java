@@ -41,9 +41,10 @@ public class ConsumerTest {
         //4、使用连接对象创建会话对象
         Session session = connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
         //5、使用会话对象创建目标对象
-        Topic topic = session.createTopic("mytopic");
+//        Topic topic = session.createTopic("mytopic");
+        Queue queue =session.createQueue("myqueue");
         //6、使用会话对象创建消费者
-        MessageConsumer consumer = session.createConsumer(topic);
+        MessageConsumer consumer = session.createConsumer(queue);
         //7、向消费者对象中设置一个messageListener对象，用来接受消息
         consumer.setMessageListener(new MessageListener() {
             @Override
@@ -52,7 +53,7 @@ public class ConsumerTest {
                 if(message instanceof  TextMessage){
                     TextMessage textMessage = (TextMessage) message;
                     try {
-                        System.out.println(textMessage.getText());
+                        System.out.println(textMessage.getText()+"==============================================");
                     } catch (JMSException e) {
                         e.printStackTrace();
                     }
@@ -61,6 +62,7 @@ public class ConsumerTest {
         });
         //8、程序等待接收用户消息
         System.in.read();
+        System.out.println(System.in.read());
         //9、关闭资源
         consumer.close();
         session.close();
