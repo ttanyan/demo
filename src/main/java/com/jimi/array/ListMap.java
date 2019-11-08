@@ -37,17 +37,24 @@ public class ListMap {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();
 
-        for(int i=0;i<10;i++){
+        for(int i=0;i<2;i++){
             Student student = new Student();
             student.setAge(i);
             student.setName("student"+i);
             students.add(student);
         }
+        List<Student> sts = new ArrayList<>();
+        for(int i=1;i<3;i++){
+            Student student1 = new Student();
+            student1.setAge(i);
+            student1.setName("sts"+i);
+            sts.add(student1);
+        }
+        students.removeAll(sts);
+        students.addAll(sts);
+        System.out.println("=================="+students.toString());
         List<Map<String,Student>> list = ObjectToMap(students);
         System.out.println(list.size());
-
-
-
     }
 
     public static List<Map<String,Student>> ObjectToMap(List<Student> studentList){

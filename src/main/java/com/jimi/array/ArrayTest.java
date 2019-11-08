@@ -26,40 +26,47 @@ import java.util.*;
  */
 public class ArrayTest {
     public static void main(String[] args) {
-        List<String> list2 = new ArrayList<String>();
-        //给list2赋值
-        list2.add("2015132114");
-        list2.add("2015132111");
-        list2.add("2015132112");
-        list2.add("2015132113");
-        list2.add("2015132114");
-        System.out.println(list2);
-        //List转Set
-        Set<String> aimei = new HashSet<>(list2);
-        // Set转String
-        Object[] strArray = aimei.toArray();
-
-        System.out.println("object对象 "+strArray.toString());
-        //Set转String
-        String s = String.join(",",aimei);
-        System.out.println("sString\r"+s);
-        //空格替换
-        String bimei = "2015132114\n2015132113\n\n\n\n\n\n\n\n\n\n\n\n\n\r\r2015132115\n2015132110\n2015132116";
-        String imeis = bimei.replaceAll("\n+",",");
-        String imeis1 = bimei.replaceAll("\n",",").replaceAll("\r",",").replaceAll(",+",",").replaceAll(" ","");
-        Set<String> imeiArray = new HashSet<>(Arrays.asList(imeis.split(",")));
-        System.out.println(aimei);
-        System.out.println(imeiArray);
-        imeiArray.addAll(aimei);
-        System.out.println(imeiArray);
-
-        //删除头尾空白字符
-        String qs = " rerewr  ";
-        System.out.println(qs.trim());
+//        List<String> list2 = new ArrayList<String>();
+//        //给list2赋值
+//        list2.add("2015132114");
+//        list2.add("2015132111");
+//        list2.add("2015132112");
+//        list2.add("2015132113");
+//        list2.add("2015132114");
+//        list2.add("");
+//        list2.add("");
+//        System.out.println(list2);
+//        List<String> jimiList = list2.subList(0,2);
+//        System.out.println("###################"+jimiList.toString());
+//
+//        //List转Set
+//        Set<String> aimei = new HashSet<>(list2);
+//        // Set转String
+//        Object[] strArray = aimei.toArray();
+//
+//        System.out.println("object对象 "+strArray.toString());
+//        //Set转String
+//        String s = String.join(",",aimei);
+//        System.out.println("sString\r"+s);
+//        //空格替换
+//        String bimei = "2015132114\n2015132113\n\n\n\n\n\n\n\n\n\n\n\n\n\r\r2015132115\n2015132110\n2015132116";
+//        String imeis = bimei.replaceAll("\n+",",");
+//        String imeis1 = bimei.replaceAll("\n",",").replaceAll("\r",",").replaceAll(",+",",").replaceAll(" ","");
+//        Set<String> imeiArray = new HashSet<>(Arrays.asList(imeis.split(",")));
+//        System.out.println(aimei);
+//        System.out.println(imeiArray);
+//        imeiArray.addAll(aimei);
+//        System.out.println(imeiArray);
+//
+//        //删除头尾空白字符
+//        String qs = " rerewr  ";
+//        System.out.println(qs.trim());
 
         //验证String[]的length会不会计算空值
-        String[] strings = {"1","","2",""};
-        System.out.println(strings.length);
+        String[] strings = new String[20];
+        strings = new String[]{"1", "", "2", ""};
+        Set<String> staffsSet = new HashSet<>(Arrays.asList(strings));
+        System.out.println(staffsSet);
 
 
 
