@@ -20,10 +20,7 @@ package com.jimi.array;
 import com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
 import org.apache.poi.ss.formula.functions.T;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author TanLianWang
@@ -50,12 +47,21 @@ public class ListMap {
             student1.setName("sts"+i);
             sts.add(student1);
         }
-        students.removeAll(sts);
-        students.addAll(sts);
-        System.out.println("=================="+students.toString());
+
+        for (Student student:students) {
+            for (Student s:sts) {
+                if(student.getAge().equals(s.getAge())){
+                    students.add(s);
+                }
+            }
+        }
+        System.out.println(students.toString());
+
+
         List<Map<String,Student>> list = ObjectToMap(students);
         System.out.println(list.size());
     }
+
 
     public static List<Map<String,Student>> ObjectToMap(List<Student> studentList){
         List<Map<String,Student>> list = new ArrayList<>();
