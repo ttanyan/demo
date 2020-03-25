@@ -48,8 +48,8 @@ public class ProductQueue {
         //7、使用会话对象创建一个消息对象
         TextMessage textMessage = session.createTextMessage(dateTimeFormatter.format(LocalDateTime.now())+"hello!JIMI");
         //8、发送消息
-        System.out.println(dateTimeFormatter.format(LocalDateTime.now())+" 发送成功");
         producer.send(textMessage);
+        System.out.println(dateTimeFormatter.format(LocalDateTime.now())+" 发送成功");
         //9、关闭资源
         producer.close();
         session.close();

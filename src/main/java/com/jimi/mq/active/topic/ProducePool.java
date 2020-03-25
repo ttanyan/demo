@@ -36,8 +36,7 @@ public class ProducePool {
     private Destination destination = null;
     private Connection connection = null;
     private Session session = null;
-    private MessageProducer messageProducer = null;
-    MessageProducer producer = null;
+    private MessageProducer producer = null;
 
     /**
      * 初始化工作
@@ -53,7 +52,6 @@ public class ProducePool {
          //3、使用连接对象创建会话（session）对象
          session = connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
          //使用会话对象创建生产者
-//         destination = session.createTopic(subject);
         destination =session.createQueue(subject);
         producer = session.createProducer(destination);
 
