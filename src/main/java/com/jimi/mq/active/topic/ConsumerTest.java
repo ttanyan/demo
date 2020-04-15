@@ -32,7 +32,7 @@ public class ConsumerTest {
     public static void main(String[] args)  throws  Exception{
         //1、创建工厂连接，指定ip、用户名、密码
         ActiveMQConnectionFactory activeMQConnectionFactory =
-                new ActiveMQConnectionFactory(ActiveMQConnection.DEFAULT_USER,ActiveMQConnection.DEFAULT_PASSWORD, ActiveMQConnection.DEFAULT_BROKER_URL);
+                new ActiveMQConnectionFactory("utech","utech2020", "failover://tcp://111.231.188.211:61616");
         //2、使用连接工厂创建一个连接对象
         Connection connection = activeMQConnectionFactory.createConnection();
         //3、开启连接

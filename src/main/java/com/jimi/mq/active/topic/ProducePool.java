@@ -29,9 +29,9 @@ import javax.jms.*;
  */
 public class ProducePool {
 
-    private String user = ActiveMQConnection.DEFAULT_USER;
-    private String password = ActiveMQConnection.DEFAULT_PASSWORD;
-    private String url = ActiveMQConnection.DEFAULT_BROKER_URL;
+    private String user = "utech";
+    private String password = "utech2020";
+    private String url = "failover://tcp://111.231.188.211:61616";
     private String subject = "myqueue";
     private Destination destination = null;
     private Connection connection = null;
