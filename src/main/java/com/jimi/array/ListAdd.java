@@ -63,6 +63,13 @@ public class ListAdd {
         aSet.addAll(bSet);
         System.out.println(aSet);
 
+
+        List<String> strings = new ArrayList<>();
+        strings.add("da");
+        strings.forEach(s -> {
+            System.out.println(s);
+        });
+
     }
 
 }
