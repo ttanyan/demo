@@ -37,16 +37,10 @@ public class slat {
         String salt = new SecureRandomNumberGenerator().nextBytes().toString();
         int times = 8;
         String algorithmName = "md5";
-
-        String encodeStr;
         System.out.println(MD5("t19962864",1));
-
-
-
-
         String encodedPassword = new SimpleHash(algorithmName, password, salt, times).toString();
-
         System.out.printf("原始密码是 %s , 盐是： %s, 运算次数是： %d, 运算出来的密文是：%s ", password, salt, times, encodedPassword);
+        System.out.println();
 
         Object testObject = new ArrayList();
         displayObjectClass(testObject);
