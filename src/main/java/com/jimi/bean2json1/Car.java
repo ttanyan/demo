@@ -15,17 +15,21 @@
  */
 
 
-package com.jimi.bean2json2;
+package com.jimi.bean2json1;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Tanlianwang
  * @version 1.0
- * @date 2019/1/18 16:46
+ * @date 2019/1/18 16:38
  */
-public class Person {
+public class Car {
     private String  name;
-    private String sex;
-    private Integer age;
+    private String type;
+    private Integer number;
+    private List<Person> person = new ArrayList<Person>();
 
     public String getName() {
         return name;
@@ -35,25 +39,34 @@ public class Person {
         this.name = name;
     }
 
-    public String getSex() {
-        return sex;
+    public String getType() {
+        return type;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public Integer getAge() {
-        return age;
+    public Integer getNumber() {
+        return number;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 
-    public Person(String name, String sex, Integer age) {
+    public List getPerson() {
+        return person;
+    }
+
+    public void setPerson(List person) {
+        this.person = person;
+    }
+
+    public Car(String name, String type, Integer number, List person) {
         this.name = name;
-        this.sex = sex;
-        this.age = age;
+        this.type = type;
+        this.number = number;
+        this.person = person;
     }
 }

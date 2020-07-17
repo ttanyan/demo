@@ -20,8 +20,8 @@ package com.jimi;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.jimi.bean2json2.Car;
-import com.jimi.bean2json2.Person;
+import com.jimi.bean2json1.Car;
+import com.jimi.bean2json1.Person;
 
 import java.util.ArrayList;
 import java.util.List;
