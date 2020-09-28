@@ -15,7 +15,7 @@
  */
 
 
-package com.jimi;
+package com.jimi.utils;
 
 import java.util.Random;
 

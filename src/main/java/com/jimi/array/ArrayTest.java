@@ -120,9 +120,9 @@ public class ArrayTest {
         //HashMap计算重复数字
         HashMap<Integer,Integer> map = new HashMap<>();
         map.put(1,2);
-        /**
-         * hello
-         */
+        map.put(2,3);
+        System.out.println(map.entrySet()+"           sesefs"+map.size());
+        map.entrySet();
         System.out.println(map.get(1));
         System.out.println(map.containsKey(1));
 

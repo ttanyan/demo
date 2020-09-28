@@ -15,7 +15,7 @@
  */
 
 
-package com.jimi;
+package com.jimi.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

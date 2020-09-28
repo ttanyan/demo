@@ -14,7 +14,7 @@
  * http://www.chinautech.com/
  */
 
-package com.jimi;
+package com.jimi.utils;
 
 import org.springframework.beans.BeanUtils;
 
