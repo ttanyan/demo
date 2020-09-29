@@ -26,5 +26,6 @@ public class SayImpl  implements  Say {
     @Override
     public void sayJimi(String word) {
         System.out.println("hello!"+word);
+
     }
 }

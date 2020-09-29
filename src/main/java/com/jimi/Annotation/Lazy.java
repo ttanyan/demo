@@ -1,5 +1,10 @@
 package com.jimi.Annotation;
 
+import org.springframework.context.annotation.Bean;
+
+/**
+ * 懒加载的注解使用
+ */
 public class Lazy {
 
   private String name;

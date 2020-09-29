@@ -35,7 +35,7 @@ public class TestInvocationHandler implements InvocationHandler {
         System.out.println("invoke begin");
         System.out.println("method :" + method.getName()+"：is invoke");
         method.invoke(target,args);
-        System.out.println("invoke end");
+        System.out.println("invoke end"+"------------");
         return null;
     }
 }

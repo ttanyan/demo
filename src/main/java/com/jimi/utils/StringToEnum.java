@@ -1,7 +1,5 @@
 package com.jimi.utils;
 
-import org.apache.avalon.framework.Enum;
-
 class StringToEnum {
 
 

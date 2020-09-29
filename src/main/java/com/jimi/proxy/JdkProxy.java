@@ -22,13 +22,19 @@ import java.lang.reflect.Proxy;
 /**
  * @author Tanlianwang
  * @version 1.0
+ * java代理
  * @date 2019/1/25 18:10
  */
 public class JdkProxy {
     public static void main(String[] args) {
         TestInvocationHandler testInvocationHandler = new TestInvocationHandler(new SayImpl());
         Say say = (Say) Proxy.newProxyInstance(SayImpl.class.getClassLoader(),SayImpl.class.getInterfaces(),testInvocationHandler);
-        say.sayJimi("几米");
+       try {
+
+           say.sayJimi("几米");
+       }catch (NullPointerException e){
+           System.out.println(e.getMessage());
+       }
 
     }
 }

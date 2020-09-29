@@ -36,15 +36,15 @@ public class Person {
     private String age;
 
     public Person() {
-        System.out.println("构造方法");
+        System.out.println("Bean的生命周期-----我是Bean的构造方法");
     }
 
     @PostConstruct
     public void  apple(){
-        System.out.println("吃个apple");
+        System.out.println("Bean的生命周期-----我是@PostConstruct注解的方法");
     }
     @PreDestroy
     public void banana(){
-        System.out.println("吃个banana");
+        System.out.println("Bean的生命周期-----我是@PreDestroy注解的方法");
     }
 }
