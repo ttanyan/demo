@@ -37,10 +37,10 @@ public class RedisTest {
         //最大空闲值
         config.setMaxIdle(10);
         //连接本地的Redis服务
-        Jedis jedis = new Jedis("localhost");
-        System.out.println("连接成功");
+        Jedis jedis = new Jedis("127.0.0.1",6379);
         //输入密码
-        jedis.auth("123456");
+        jedis.auth("199628@tlw");
+        System.out.println("连接成功");
         //查看服务是否在运行
         System.out.println("服务正在运行:"+ jedis.ping());
 

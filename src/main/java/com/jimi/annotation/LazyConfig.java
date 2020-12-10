@@ -1,4 +1,4 @@
-package com.jimi.Annotation;
+package com.jimi.annotation;
 
 import org.springframework.context.annotation.Bean;
 

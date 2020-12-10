@@ -1,7 +1,7 @@
 package com.jimi;
 
-import com.jimi.Annotation.Lazy;
-import com.jimi.Annotation.LazyConfig;
+import com.jimi.annotation.Lazy;
+import com.jimi.annotation.LazyConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

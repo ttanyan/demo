@@ -1,6 +1,4 @@
-package com.jimi.Annotation;
-
-import org.springframework.context.annotation.Bean;
+package com.jimi.annotation;
 
 /**
  * 懒加载的注解使用
