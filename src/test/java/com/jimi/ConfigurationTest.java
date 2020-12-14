@@ -22,6 +22,8 @@ import com.jimi.annotations.Driver;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDateTime;
+
 /**
  * @author anyant
  * @version 1.0
@@ -42,6 +44,7 @@ public class ConfigurationTest extends BaseTest {
         //使用Configuration注解时，生成当前对象的子类Class，并对方法拦截，第二次调用car()方法时直接从BeanFactory之中获取对象，所以得到的是同一个对象。
         boolean result = driver.getCar() == car;
         logger.info(result ? "同一个car" : "不同的car");
+        logger.info(LocalDateTime.now().toString());
     }
 
 

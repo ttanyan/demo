@@ -5,8 +5,20 @@ import org.springframework.cglib.beans.BeanCopier;
 import org.springframework.cglib.beans.BeanGenerator;
 import org.springframework.cglib.beans.BeanMap;
 
-class test {
-  public static void main(String[] args) {
+class hellotest {
+
+  private static final hellotest tqw = new hellotest();
+  private hellotest(){
+    System.out.println("hello");
+  }
+  public static hellotest getInstance(){
+    return tqw;
+  }
+
+  public static void main(String[] args) throws InterruptedException {
+    System.out.println("23112");
+    Thread.sleep(7000);
+    hellotest.getInstance();
   BeanGenerator beanGenerator = new BeanGenerator();
     beanGenerator.addProperty("id",Long.class);
     beanGenerator.addProperty("name",String.class);

@@ -124,12 +124,12 @@
         </dependency>
 
 
-        <!-- MQ -->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.activemq</groupId>-->
-<!--            <artifactId>activemq-all</artifactId>-->
-<!--            <version>5.14.0</version>-->
-<!--        </dependency>-->
+        <!--MQ-->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.14.0</version>
+        </dependency>
         <!--Redis-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
