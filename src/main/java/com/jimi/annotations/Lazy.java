@@ -1,4 +1,4 @@
-package com.jimi.annotation;
+package com.jimi.annotations;
 
 /**
  * 懒加载的注解使用

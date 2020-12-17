@@ -1,5 +1,5 @@
 /*
- * COPYRIGHT. ShenZhen JiMi Technology Co., Ltd. 2019.
+ * COPYRIGHT. ShenZhen JiMi Technology Co., Ltd. 2020.
  * ALL RIGHTS RESERVED.
  *
  * No part of this publication may be reproduced, stored in a retrieval system, or transmitted,
@@ -10,40 +10,37 @@
  *
  * Date                   By              Description
  * -------------------    -----------     -------------------------------------------
- * 2019/12/24    anyant         Create the class
+ * 2020/12/17    anyant         Create the class
  * http://www.jimilab.com/
  */
 
 
-package com.jimi.thread;
+package com.jimi.string;
 
 /**
  * @author anyant
  * @version 1.0
  * @ProjectName demo
  * @Description
- * @Date 2019/12/24 5:03 下午
+ * @Date 2020/12/17 下午11:34
  */
-public class ThreadTest extends Thread {
-    int i = 0;
-    @Override
-    public void run(){
-        for(;i<100;i++){
-            System.out.println(getName()+"  "+i);
-        }
-    }
+public class IsVaild {
 
-    public static void main(String[] args) {
-        for(int i = 0 ;i<100;i++){
-            if(i == 20 )
-            {
-                new ThreadTest().start();
-                new ThreadTest().start();
-            }
-
+    public static boolean isValid(String s) {
+        final int j = s.length();
+        if (j % 2 != 0) {
+            return false;
         }
 
-
-
+        for (int i = 0; i < j / 2; i++) {
+            s = s.replace("()", "")
+                    .replace("{}", "")
+                    .replace("[]", "");
+        }
+        if (s.equals("")) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

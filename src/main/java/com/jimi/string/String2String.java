@@ -28,6 +28,7 @@ import java.util.List;
  * @Date 2019/10/21 18:09
  */
 public class String2String {
+
     public static void main(String[] args) {
         String imei1 = "11,22";
         String imei2 = "33,44";
@@ -35,5 +36,9 @@ public class String2String {
         System.out.println(imei);
         List<String> list = new ArrayList<>();
         System.out.println(list.size());
+        System.out.println("===========================================");
+        String s="{[]}";
+        System.out.println(IsVaild.isValid(s));
     }
+
 }
