@@ -17,8 +17,6 @@
 
 package com.jimi.java8.functional;
 
-import java.util.function.Predicate;
-
 /**
  * @author anyant
  * @version 1.0
@@ -28,8 +26,7 @@ import java.util.function.Predicate;
  */
 public class FunctionalDemo {
     public static void main(String[] args) {
-        Predicate<String> predicate = (s) -> s.length() > 0;
-        predicate.test("foo");
+
     }
 
 }

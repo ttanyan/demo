@@ -15,7 +15,7 @@ public class ParallelTime {
 
         //模拟10000条数据 forEach打印测试
         List<Integer> list = new ArrayList();
-        for (int j = 0; j < 10; j++) {
+        for (int j = 0; j < 10000; j++) {
             list.add(j);
         }
 
@@ -25,7 +25,7 @@ public class ParallelTime {
         for (int i = 0; i < list.size(); i++) {
             try {
                 //睡眠1毫秒
-                TimeUnit.MILLISECONDS.sleep(1);
+//                TimeUnit.MILLISECONDS.sleep(1);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -38,7 +38,7 @@ public class ParallelTime {
         list.stream().forEach(r -> {
             try {
                 //睡眠1毫秒
-                TimeUnit.MILLISECONDS.sleep(1);
+//                TimeUnit.MILLISECONDS.sleep(1);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -53,15 +53,16 @@ public class ParallelTime {
             try {
                 Thread thread = Thread.currentThread();
                 threads.add(thread);
-                System.out.println("系统创建了"+threads.size()+"个线程");
+
                 //睡眠1毫秒
-                TimeUnit.MILLISECONDS.sleep(1);
+//                TimeUnit.MILLISECONDS.sleep(1);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
         long parallelStreamendTime = System.currentTimeMillis();
         System.out.println("parallelStream : " + (parallelStreamendTime - startTime) + "ms");
+        System.out.println("系统创建了"+threads.size()+"个线程");
 
 
     }
