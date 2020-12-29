@@ -53,7 +53,7 @@ public class TimeApi {
 
 
         //2.LocalTime 本地时间
-        //本地时间类表示一个没有指定时区的时间，例如，10 p.m.或者17:30:15，下面的 例子会用上面的例子定义的时区创建两个本地时间对象。然后我们会比较两个时 间，并计算它们之间的小时和分钟的不同。
+        //本地时间类表示一个没有指定时区的时间，例如，10 p.m.或者17:30:15，下面的 例子会用上面的例子定义的时区创建两个本地时间对象。然后我们会比较两个时间，并计算它们之间的小时和分钟的不同。
         // 创建上海Asia/Shanghai和伦敦Europe/London的时区 测试LocalTime
         LocalTime now = LocalTime.now(ZoneId.of("Europe/London"));
         LocalTime now1 = LocalTime.now(ZoneId.of("Asia/Shanghai"));
