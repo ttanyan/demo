@@ -17,6 +17,11 @@
 
 package com.jimi.redis;
 
+import org.redisson.Redisson;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
+
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -28,7 +33,7 @@ import java.util.Set;
  */
 public class Test {
 
-        public static void main(String args[]) {
+        public static void main(String args[]) throws IOException {
             String Str = new String("www.google.com");
 
             System.out.print("匹配成功返回值 :" );
@@ -36,8 +41,12 @@ public class Test {
             System.out.print("匹配失败返回值 :" );
             System.out.println(Str.replaceAll("(.*)q(.*)", "runoob" ));
 
-
-                Set set = new HashSet();
+            MyRedission myRedission = new MyRedission();
+            RedissonClient redisson = myRedission.redisson();
+            RLock lock = redisson.getLock("12");
+            lock.lock();
+            lock.unlock();
+            Set set = new HashSet();
 
               for(int i = 0;i<2000;i++){
                   set.add(i);

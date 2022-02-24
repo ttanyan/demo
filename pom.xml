@@ -111,6 +111,11 @@
             <scope>provided</scope>
         </dependency>
         <!--sl4j-->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.15.5</version>
+        </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>

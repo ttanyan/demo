@@ -18,6 +18,7 @@
 package com.jimi.redis;
 
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.util.Iterator;
@@ -31,14 +32,24 @@ import java.util.Set;
  */
 public class RedisTest {
     public static void main(String[] args) {
+
         JedisPoolConfig config = new JedisPoolConfig();
         //最大连接数
         config.setMaxTotal(100);
         //最大空闲值
         config.setMaxIdle(10);
+
         //连接本地的Redis服务
-        Jedis jedis = new Jedis("127.0.0.1",6379);
+        Jedis jedis = new Jedis("127.0.0.1", 6379);
+        //连接池的方式连接
+        try (JedisPool jedisPool = new JedisPool(config, "127.0.0.1", 6379, 3000)) {
+            Jedis jedis1 = jedisPool.getResource();
+
+
+        }
+
         //输入密码
+//        new JedisPoolConfig(config,);
         jedis.auth("199628@tlw");
         System.out.println("连接成功");
         //查看服务是否在运行
