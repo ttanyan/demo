@@ -52,9 +52,9 @@ public class WaitNotify {
                         new SimpleDateFormat("HH:mm:ss").format(new Date()));
                 lock.notifyAll();
                 flag = false;
-                SleepUtils.second(5);
+//                SleepUtils.second(5);
             }
-            // 再次加锁
+//             再次加锁
             synchronized (lock) {
                 System.out.println(Thread.currentThread() + " hold lock again. sleep @ " +
                         new SimpleDateFormat("HH:mm:ss").format(new Date()));

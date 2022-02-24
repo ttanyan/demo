@@ -9,12 +9,6 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class test {
     public static void main(String[] args) {
-        ReentrantLock lock = new ReentrantLock(true);
-        ReentrantLock lock1 = new ReentrantLock(false);
-        lock.lock();
-        lock.unlock();
-        lock1.lock();
-
-        Thread.interrupted();
+        ThreadLocal<Object> objectThreadLocal = new ThreadLocal<>();
     }
 }
