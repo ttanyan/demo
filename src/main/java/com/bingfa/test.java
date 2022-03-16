@@ -1,14 +1,11 @@
 package com.bingfa;
 
-import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 
-import javax.naming.ldap.HasControls;
-import java.math.BigDecimal;
-import java.util.*;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author Tan Lianwang
@@ -16,6 +13,7 @@ import java.util.stream.Stream;
  * @date 2022/2/9 10:12
  */
 public class test {
+
     public volatile Map sensitiveWordMap = null;
 
     public volatile Map relevanceWordMap = null;
@@ -24,7 +22,7 @@ public class test {
         // sensitiveWordMap = new HashMap(keyWordSet.size());
         Map newSensitiveMap = new HashMap();
         String key;
-        //引用指向
+        //引用指向d的使用
         Map nowMap;
         Map<String, String> newWorMap = null;
 
@@ -56,7 +54,8 @@ public class test {
         relevanceWordMap = relevancyMap;
     }
 
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws InterruptedException {
 //        double n = 1;
 //        System.out.println("本金10W");
 //        for (int i = 1; i <=150; i++) {
@@ -77,15 +76,24 @@ public class test {
 //        test test = new test();
 //        test.addSensitiveWordToHashMap(keyWordSet,relevancyMap);
 //        System.out.println(test.sensitiveWordMap.keySet());
+        DefaultThreadPool<Runnable> threadPool = new DefaultThreadPool<>();
 
+        for (int i = 0; i < 1000; i++) {
+            Job job = new Job(i);
+            threadPool.execute(job);
+        }
+    }
+    static class Job implements Runnable{
+        private int test;
 
-         Map<String, Long> maxId = Maps.newHashMap();
-         maxId.put("maxId",1L);
-         maxId.put("maxId",2L);
-        System.out.println(maxId);
+        public Job(Integer test) {
+            this.test = test;
+        }
 
-
-
-
+        @Override
+        public void run() {
+            System.out.println("job被执行"+test);
+            System.out.println(Thread.currentThread().getName());
+        }
     }
 }
