@@ -1,6 +1,4 @@
-package com.bingfa;
-
-import java.util.concurrent.TimeUnit;
+package com.bingfa.thread;
 
 /**
  * @author Tan Lianwang

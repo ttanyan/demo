@@ -1,7 +1,4 @@
-package com.bingfa;
-
-import com.google.inject.Singleton;
-import lombok.Synchronized;
+package com.bingfa.thread;
 
 /**
  * @author Tan Lianwang

@@ -1,7 +1,8 @@
-package com.bingfa;
+package com.bingfa.thread;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -19,10 +20,10 @@ public class test {
     public volatile Map relevanceWordMap = null;
     public  void addSensitiveWordToHashMap(Set<String> keyWordSet, Map<String, String> relevancyMap) {
 
-        // sensitiveWordMap = new HashMap(keyWordSet.size());
+//         sensitiveWordMap = new HashMap(keyWordSet.size());
         Map newSensitiveMap = new HashMap();
         String key;
-        //引用指向d的使用
+        //引用指向的使用
         Map nowMap;
         Map<String, String> newWorMap = null;
 
@@ -32,8 +33,8 @@ public class test {
             if (StringUtils.isNotBlank(key)) {
                 nowMap = newSensitiveMap;
                 for (int i = 0; i < key.length(); i++) {
-                    System.out.println(newSensitiveMap.keySet()+" "+newSensitiveMap.hashCode());
-                    System.out.println(nowMap.keySet()+""+nowMap.hashCode());
+//                    System.out.println(newSensitiveMap.keySet()+" "+newSensitiveMap.hashCode());
+//                    System.out.println(nowMap.keySet()+""+nowMap.hashCode());
                     char keyChar = key.charAt(i);
                     Object wordMap = nowMap.get(keyChar);
                     if (wordMap != null) {
@@ -56,16 +57,16 @@ public class test {
 
 
     public static void main(String[] args) throws InterruptedException {
-//        double n = 1;
-//        System.out.println("本金10W");
-//        for (int i = 1; i <=150; i++) {
-//            n=n+n*0.1;
-//            BigDecimal bigDecimal = new BigDecimal(n);
-//            System.out.println("第"+i+"个涨停:"+bigDecimal.toString());
-////            if(n > 100000000){
-////                return;
-////            }
-//        }
+        double n = 10;
+        System.out.println("本金10W");
+        for (int i = 1; i <=10; i++) {
+            n=n+n*0.1;
+            BigDecimal bigDecimal = new BigDecimal(n);
+            System.out.println("第"+i+"个涨停:"+bigDecimal.toString());
+//            if(n > 100000000){
+//                return;
+//            }
+        }
 
 //        Set<String> keyWordSet = new HashSet<>();
 //        Map<String, String> relevancyMap = new HashMap<>();
@@ -76,6 +77,15 @@ public class test {
 //        test test = new test();
 //        test.addSensitiveWordToHashMap(keyWordSet,relevancyMap);
 //        System.out.println(test.sensitiveWordMap.keySet());
+        Map newSensitiveMap = new HashMap();
+        String key;
+        //引用指向的使用
+        Map nowMap;
+        Map<String, String> newWorMap = null;
+
+
+
+
         DefaultThreadPool<Runnable> threadPool = new DefaultThreadPool<>();
 
         for (int i = 0; i < 1000; i++) {

@@ -1,4 +1,4 @@
-package com.bingfa;
+package com.bingfa.thread;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

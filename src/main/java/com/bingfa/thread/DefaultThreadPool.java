@@ -1,4 +1,4 @@
-package com.bingfa;
+package com.bingfa.thread;
 
 import java.util.ArrayList;
 import java.util.Collections;

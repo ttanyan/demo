@@ -1,4 +1,4 @@
-package com.bingfa;
+package com.bingfa.thread;
 
 /**
  * @author Tan Lianwang

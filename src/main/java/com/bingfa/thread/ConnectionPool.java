@@ -1,4 +1,4 @@
-package com.bingfa;
+package com.bingfa.thread;
 
 import java.sql.Connection;
 import java.util.LinkedList;
