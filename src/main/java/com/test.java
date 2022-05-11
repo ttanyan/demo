@@ -17,8 +17,9 @@ public class test {
         CollectionUtils.isEmpty(new ArrayList<>());
         ArrayList<Object> list = null;
         System.out.println(CollectionUtils.isEmpty(list));
-        System.out.println(properties.getProperty("os.name"));
+        System.out.println(properties.getProperty("os.name")+"hahah");
         System.out.println(new Date().getTime());
         System.out.println(System.currentTimeMillis());
+        System.out.println(System.currentTimeMillis() / 1000);
     }
 }
