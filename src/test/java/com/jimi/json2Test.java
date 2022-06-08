@@ -43,6 +43,8 @@ public class json2Test {
         Car car = new Car("悍马","越野",12345,persons);
         String json = JSON.toJSON(car).toString();
         System.out.println(json);
+        System.out.println(JSON.toJSON(persons));
+        List<Person> hello = JSON.parseArray(JSON.toJSON(persons).toString(),Person.class);
 
         //2.通过JSON对象生成json串
         JSONObject jsonObject = new JSONObject();
