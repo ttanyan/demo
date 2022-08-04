@@ -1,10 +1,13 @@
 package com.jimi;
 
+import com.google.common.collect.Maps;
+
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.Enumeration;
+import java.util.Map;
 
 /**
  * @author maruimin
@@ -149,5 +152,13 @@ public class Test18 {
             System.out.println("" + System.currentTimeMillis() + "==> " + SnowFlake.nextId());
             a++;
         }
+        Map<Integer,String> map = Maps.newHashMap();
+        map.put(1,"3");
+        map.put(1,"4");
+        map.put(1,"5");
+        map.put(1,"6");
+        map.put(1,"3");
+
     }
+
 }
