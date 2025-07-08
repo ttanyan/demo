@@ -41,6 +41,8 @@ public class MyRedission {
         // config.useClusterServers().addNodeAddress("127.0.0.1:7004", "127.0.0.1:7001");
         // 2.根据 Config 创建出 RedissonClient 示例。
         config.useSingleServer().setAddress("redis://127.0.0.1:6379");
+        config.useSingleServer().setClientName("root");
+        config.useSingleServer().setPassword("199628@tlw");
         return Redisson.create(config);
     }
 }

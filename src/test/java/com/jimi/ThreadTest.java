@@ -26,8 +26,9 @@ public class ThreadTest {
     }
 
     public static void main(String[] args) {
-        ThreadTest threadTest = new ThreadTest();
-        threadTest.test();
+       String s = "1,2,4";
+        System.out.println(s.replace(",","#"));
+        System.out.println(s.split(",").length);
 
 
     }

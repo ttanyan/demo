@@ -9,14 +9,16 @@ package com.jimi;
 public class Harden {
 
     public static void main(String[] args) {
-        int money = 20;
+        float money = 25;
 
-        for (int i = 1; i < 11; i++) {
-            money += money * 0.1;
+        for (int i = 1; i <=100; i++) {
+            money += money * 0.03;
             System.out.println("第 " + i + " 次涨停，资金为:" + money);
-            if(money == 39){
-                System.out.println((1/40.0)*100);
+
+            if(money >=302){
+                System.out.println("=========第 " + i + " 次涨停，资金为:" + money);
             }
+
         }
 
     }
