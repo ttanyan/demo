@@ -20,6 +20,7 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
 
+        System.out.println("====================Demo启动成功======================");
         logger.info("====================Demo启动成功======================");
 
     }
